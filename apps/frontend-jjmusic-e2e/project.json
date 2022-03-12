@@ -1,0 +1,28 @@
+{
+  "root": "apps/frontend-jjmusic-e2e",
+  "sourceRoot": "apps/frontend-jjmusic-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/frontend-jjmusic-e2e/cypress.json",
+        "devServerTarget": "frontend-jjmusic:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "frontend-jjmusic:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/frontend-jjmusic-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["frontend-jjmusic"]
+}

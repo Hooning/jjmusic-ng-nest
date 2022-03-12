@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "api": "apps/api",
+    "api-interfaces": "libs/api-interfaces",
+    "frontend-jjmusic": "apps/frontend-jjmusic",
+    "frontend-jjmusic-e2e": "apps/frontend-jjmusic-e2e"
+  }
+}

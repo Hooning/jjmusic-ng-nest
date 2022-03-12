@@ -1,0 +1,97 @@
+{
+  "projectType": "application",
+  "root": "apps/frontend-jjmusic",
+  "sourceRoot": "apps/frontend-jjmusic/src",
+  "prefix": "jjmusic-ng-nest",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/frontend-jjmusic",
+        "index": "apps/frontend-jjmusic/src/index.html",
+        "main": "apps/frontend-jjmusic/src/main.ts",
+        "polyfills": "apps/frontend-jjmusic/src/polyfills.ts",
+        "tsConfig": "apps/frontend-jjmusic/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/frontend-jjmusic/src/favicon.ico",
+          "apps/frontend-jjmusic/src/assets"
+        ],
+        "styles": ["apps/frontend-jjmusic/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/frontend-jjmusic/src/environments/environment.ts",
+              "with": "apps/frontend-jjmusic/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "frontend-jjmusic:build:production"
+        },
+        "development": {
+          "browserTarget": "frontend-jjmusic:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "proxyConfig": "apps/frontend-jjmusic/proxy.conf.json"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "frontend-jjmusic:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/frontend-jjmusic/src/**/*.ts",
+          "apps/frontend-jjmusic/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/frontend-jjmusic"],
+      "options": {
+        "jestConfig": "apps/frontend-jjmusic/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
