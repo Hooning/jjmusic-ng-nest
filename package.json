@@ -6,6 +6,9 @@
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "nx serve",
+    "serve:frontend-jjmusic": "nx serve frontend-jjmusic --port 4200",
+    "serve:api": "nx serve api",
+    "serve:api-frontend-jjmusic": "concurrently -p=\"{name}\" -n=\"NGFRONT,NESTAPI\" -c=\"blue,yellow\" \"npm run serve:frontend-jjmusic\" \"npm run serve:api\"",
     "build": "nx build",
     "test": "nx test"
   },
@@ -52,6 +55,7 @@
     "@typescript-eslint/eslint-plugin": "~5.10.0",
     "@typescript-eslint/parser": "~5.10.0",
     "cypress": "^9.1.0",
+    "concurrently": "^7.0.0",
     "eslint": "~8.7.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
