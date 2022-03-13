@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 
-import { Message } from '@jjmusic-ng-nest/api-interfaces';
+import { Message } from '@jjmusic-ng-nest/shared/data-access/models';
 
 import { AppService } from './app.service';
 

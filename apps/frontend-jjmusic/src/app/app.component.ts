@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Message } from '@jjmusic-ng-nest/api-interfaces';
+import { Message } from '@jjmusic-ng-nest/shared/data-access/models';
 
 @Component({
   selector: 'jjmusic-ng-nest-root',

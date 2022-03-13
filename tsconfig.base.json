@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@jjmusic-ng-nest/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@jjmusic-ng-nest/shared/data-access/models": [
+        "libs/shared/data-access/models/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -6,11 +6,14 @@
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "nx serve",
+    "lint": "nx workspace-lint && ng lint",
     "serve:frontend-jjmusic": "nx serve frontend-jjmusic --port 4200",
     "serve:api": "nx serve api",
     "serve:api-frontend-jjmusic": "concurrently -p=\"{name}\" -n=\"NGFRONT,NESTAPI\" -c=\"blue,yellow\" \"npm run serve:frontend-jjmusic\" \"npm run serve:api\"",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "affected:test": "nx affected:test",
+    "affected:lint": "nx affected:lint"
   },
   "private": true,
   "dependencies": {
