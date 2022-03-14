@@ -15,6 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@jjmusic-ng-nest/api/feature-config": [
+        "libs/api/feature-config/src/index.ts"
+      ],
+      "@jjmusic-ng-nest/api/utils-config": [
+        "libs/api/utils-config/src/index.ts"
+      ],
       "@jjmusic-ng-nest/shared/data-access/models": [
         "libs/shared/data-access/models/src/index.ts"
       ]
