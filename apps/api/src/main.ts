@@ -3,7 +3,7 @@
  * This is only a minimal backend to get started.
  */
 
-import { AppConfiguration, appConfiguration } from '@jjmusic-ng-nest/api/utils-config';
+import { AppConfiguration, appConfiguration, postgresConfiguration, PostgresConfiguration } from '@jjmusic-ng-nest/api/utils-config';
 import { Logger } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 
@@ -17,7 +17,9 @@ async function bootstrap() {
   await app.listen(appConfig.port);
   Logger.log(
     `🚀 Application is running on: ${appConfig.domain}/${globalPrefix}`
-  );
+    );
+
+  const dbConfig = app.get<PostgresConfiguration>(postgresConfiguration.KEY);
 }
 
 bootstrap();
