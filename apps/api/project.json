@@ -38,7 +38,8 @@
         "parallel": true,
         "commands" : [
           "nx serve api",
-          "nx serve frontend-jjmusic"
+          "nx serve frontend-jjmusic",
+          "docker-compose up"
         ]
       }
     },
