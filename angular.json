@@ -4,8 +4,8 @@
     "api": "apps/api",
     "api-feature-config": "libs/api/feature-config",
     "api-utils-config": "libs/api/utils-config",
-    "frontend-jjmusic": "apps/frontend-jjmusic",
-    "frontend-jjmusic-e2e": "apps/frontend-jjmusic-e2e",
+    "client": "apps/client",
+    "client-e2e": "apps/client-e2e",
     "shared-data-access-models": "libs/shared/data-access/models"
   }
 }
