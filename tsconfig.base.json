@@ -21,8 +21,17 @@
       "@jjmusic-ng-nest/api/utils-config": [
         "libs/api/utils-config/src/index.ts"
       ],
+      "@jjmusic-ng-nest/client/shell/feature": [
+        "libs/client/shell/feature/src/index.ts"
+      ],
       "@jjmusic-ng-nest/shared/data-access/models": [
         "libs/shared/data-access/models/src/index.ts"
+      ],
+      "@jjmusic-ng-nest/shared/ui/layout": [
+        "libs/shared/ui/layout/src/index.ts"
+      ],
+      "@jjmusic-ng-nest/shared/utils/material": [
+        "libs/shared/utils/material/src/index.ts"
       ]
     }
   },

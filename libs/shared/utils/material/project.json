@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/utils/material",
+  "sourceRoot": "libs/shared/utils/material/src",
+  "prefix": "shared-utils",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/shared/utils/material"],
+      "options": {
+        "project": "libs/shared/utils/material/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/utils/material/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/utils/material/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/utils/material"],
+      "options": {
+        "jestConfig": "libs/shared/utils/material/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/utils/material/src/**/*.ts",
+          "libs/shared/utils/material/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:shared", "type:util"]
+}

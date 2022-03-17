@@ -6,22 +6,22 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 @Module({
   imports: [
     ApiFeatureConfigModule,
-    TypeOrmModule.forRootAsync({
-      inject: [ 
-        postgresConfiguration.KEY
-      ],
-      useFactory: (config: PostgresConfiguration) => {
-        return {
-          type: 'postgres',
-          url: config.url,
-          database: config.database,
-          username: 'root',
-          password: 'root',
-          entities: [],
-          synchronize: true,
-        };
-      }
-    })
+    // TypeOrmModule.forRootAsync({
+    //   inject: [ 
+    //     postgresConfiguration.KEY
+    //   ],
+    //   useFactory: (config: PostgresConfiguration) => {
+    //     return {
+    //       type: 'postgres',
+    //       url: config.url,
+    //       database: config.database,
+    //       username: 'root',
+    //       password: 'root',
+    //       entities: [],
+    //       synchronize: true,
+    //     };
+    //   }
+    // })
   ],
   controllers: []
 })

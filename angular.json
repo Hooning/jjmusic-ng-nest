@@ -6,6 +6,9 @@
     "api-utils-config": "libs/api/utils-config",
     "client": "apps/client",
     "client-e2e": "apps/client-e2e",
-    "shared-data-access-models": "libs/shared/data-access/models"
+    "client-shell-feature": "libs/client/shell/feature",
+    "shared-data-access-models": "libs/shared/data-access/models",
+    "shared-ui-layout": "libs/shared/ui/layout",
+    "shared-util-material": "libs/shared/utils/material"
   }
 }
