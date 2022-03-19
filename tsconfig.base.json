@@ -27,6 +27,9 @@
       "@jjmusic-ng-nest/shared/data-access/models": [
         "libs/shared/data-access/models/src/index.ts"
       ],
+      "@jjmusic-ng-nest/shared/ui/footer": [
+        "libs/shared/ui/footer/src/index.ts"
+      ],
       "@jjmusic-ng-nest/shared/ui/layout": [
         "libs/shared/ui/layout/src/index.ts"
       ],

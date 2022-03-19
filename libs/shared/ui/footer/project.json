@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui/footer",
+  "sourceRoot": "libs/shared/ui/footer/src",
+  "prefix": "shared-ui",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/shared/ui/footer"],
+      "options": {
+        "project": "libs/shared/ui/footer/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/ui/footer/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/ui/footer/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/ui/footer"],
+      "options": {
+        "jestConfig": "libs/shared/ui/footer/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/footer/src/**/*.ts",
+          "libs/shared/ui/footer/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:shared", "type:ui"]
+}
