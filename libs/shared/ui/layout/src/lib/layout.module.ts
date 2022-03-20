@@ -6,12 +6,7 @@ import { MaterialModule } from '@jjmusic-ng-nest/shared/utils/material';
 import { SharedUiFooterModule } from '@jjmusic-ng-nest/shared/ui/footer';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule,
-    MaterialModule,
-    SharedUiFooterModule
-  ],
+  imports: [CommonModule, RouterModule, MaterialModule, SharedUiFooterModule],
   exports: [LayoutComponent],
   declarations: [LayoutComponent],
 })

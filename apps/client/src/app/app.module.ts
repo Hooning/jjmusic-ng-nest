@@ -8,12 +8,7 @@ import { ClientShellModule } from '@jjmusic-ng-nest/client/shell/feature';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    RouterModule,
-    MaterialModule,
-    ClientShellModule
-  ],
+  imports: [BrowserModule, RouterModule, MaterialModule, ClientShellModule],
   providers: [],
   bootstrap: [AppComponent],
 })

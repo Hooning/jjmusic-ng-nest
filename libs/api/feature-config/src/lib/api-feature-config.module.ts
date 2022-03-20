@@ -1,4 +1,7 @@
-import { appConfiguration, postgresConfiguration } from '@jjmusic-ng-nest/api/utils-config';
+import {
+  appConfiguration,
+  postgresConfiguration,
+} from '@jjmusic-ng-nest/api/utils-config';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 
@@ -6,11 +9,8 @@ import { ConfigModule } from '@nestjs/config';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-      load: [
-        appConfiguration,
-        postgresConfiguration
-      ]
-    })
-  ]
+      load: [appConfiguration, postgresConfiguration],
+    }),
+  ],
 })
 export class ApiFeatureConfigModule {}

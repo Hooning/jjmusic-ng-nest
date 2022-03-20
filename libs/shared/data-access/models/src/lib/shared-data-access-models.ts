@@ -1,3 +1,3 @@
 export function sharedDataAccessModels(): string {
-  return 'shared-data-access-models';
+  return 'shared-data-access-models'
 }

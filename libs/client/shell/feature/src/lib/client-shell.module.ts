@@ -9,9 +9,9 @@ import { clientShellRoutes } from './client-shell.routes';
     CommonModule,
     LayoutModule,
     RouterModule.forRoot(clientShellRoutes, {
-      scrollPositionRestoration: 'top'      
-    })
+      scrollPositionRestoration: 'top',
+    }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class ClientShellModule {}
