@@ -1,37 +1,45 @@
+@use './../../../../../../apps/client/src/scss/abstracts/breakpoints' as bp;
+
 .footer {
+  padding: 1rem;
+  font-size: 14px;
   background-color: #1e1827;
   color: white;
   display: flex;
-  flex-direction: column;
-  // flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 0.5rem;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 
 .footer > * {
-  flex-basis: 15%;
-  padding: 1rem;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 42%;
+  padding: 10px;
+  text-align: center;
 }
 
-.footer > *:nth-child(1) {
-  flex-basis: 18%;
-}
 
-.footer > *:nth-child(2) {
-  flex-basis: 15%;
-}
 
-.footer > *:nth-child(3) {
-  flex-basis: 0%;
-}
-
-@media only screen and (min-width: 630px) {
+@media only screen and (min-width: map-get(bp.$breakpoints, "md")) {
   .footer {
-    flex-direction: row;
+    flex-wrap: nowrap;
+    font-size: 16px;
+  }
+
+  .footer > * {
+    flex-basis: 22%;
+  }
+
+  .footer > *:nth-child(2) {
+    padding-left: -10px;
+    text-align: left;
   }
 
   .footer > *:nth-child(3) {
-    flex-basis: 15%;
+    padding-right: -10px;
+    text-align: right;
   }
 }
