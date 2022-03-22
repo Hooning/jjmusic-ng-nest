@@ -10,6 +10,7 @@
     "shared-data-access-models": "libs/shared/data-access/models",
     "shared-ui-footer": "libs/shared/ui/footer",
     "shared-ui-layout": "libs/shared/ui/layout",
+    "shared-ui-toolbar": "libs/shared/ui/toolbar",
     "shared-util-material": "libs/shared/utils/material"
   }
 }

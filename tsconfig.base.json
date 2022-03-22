@@ -33,6 +33,9 @@
       "@jjmusic-ng-nest/shared/ui/layout": [
         "libs/shared/ui/layout/src/index.ts"
       ],
+      "@jjmusic-ng-nest/shared/ui/toolbar": [
+        "libs/shared/ui/toolbar/src/index.ts"
+      ],
       "@jjmusic-ng-nest/shared/utils/material": [
         "libs/shared/utils/material/src/index.ts"
       ]
