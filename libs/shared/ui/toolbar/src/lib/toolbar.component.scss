@@ -1,6 +1,29 @@
 .toolbar-container { 
     display: flex;
-    gap: 1rem;
+    gap: 3rem;
     justify-content: space-between;
     align-items: center;
+}
+
+.burger-menu {
+    @media (min-width: 720px) {
+        display: none;
+    }
+}
+
+.nav-menu {
+    display: none;
+    @media (min-width: 720px) {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+}
+
+.navigation-items {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
