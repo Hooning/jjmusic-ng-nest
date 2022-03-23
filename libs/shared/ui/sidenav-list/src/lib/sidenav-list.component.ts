@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'shared-ui-sidenav-list',
   templateUrl: './sidenav-list.component.html',
-  styleUrls: ['./sidenav-list.component.scss']
+  styleUrls: ['./sidenav-list.component.scss'],
 })
-export class SidenavListComponent implements OnInit {
+export class SidenavListComponent {
+  @Output()
+  closeSidenav = new EventEmitter<void>();
 
-  constructor() { }
-
-  ngOnInit(): void {
+  onClose(): void {
+    this.closeSidenav.emit();
   }
-
 }

@@ -1,0 +1,15 @@
+.nav-list {
+  width: 180px;
+}
+
+.nav-list > * {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.close-button {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0.5rem;
+}
