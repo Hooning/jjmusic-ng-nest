@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui/sidenav-list",
+  "sourceRoot": "libs/shared/ui/sidenav-list/src",
+  "prefix": "shared-ui",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/shared/ui/sidenav-list"],
+      "options": {
+        "project": "libs/shared/ui/sidenav-list/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/ui/sidenav-list/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/ui/sidenav-list/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/ui/sidenav-list"],
+      "options": {
+        "jestConfig": "libs/shared/ui/sidenav-list/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/sidenav-list/src/**/*.ts",
+          "libs/shared/ui/sidenav-list/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:share", "type:ui"]
+}

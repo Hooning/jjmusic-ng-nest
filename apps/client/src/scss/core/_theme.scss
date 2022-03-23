@@ -4,7 +4,7 @@
 
 @include mat.core();
 
-$my-primary: mat.define-palette(pal.$teal-palette, 500);
+$my-primary: mat.define-palette(pal.$teal-palette, 600);
 $my-accent: mat.define-palette(pal.$teal-palette, A200, A100, A400);
 $my-warn: mat.define-palette(pal.$red-palette);
 
