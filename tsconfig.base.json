@@ -21,6 +21,9 @@
       "@jjmusic-ng-nest/api/utils-config": [
         "libs/api/utils-config/src/index.ts"
       ],
+      "@jjmusic-ng-nest/client/about/feature/about-list": [
+        "libs/client/about/feature/about-list/src/index.ts"
+      ],
       "@jjmusic-ng-nest/client/shell/feature": [
         "libs/client/shell/feature/src/index.ts"
       ],
