@@ -2,26 +2,26 @@
 	<a class="close-button" (click)="onClose()">
 		<span style="cursor: pointer;"><mat-icon>close</mat-icon></span>
 	</a>
-	<a mat-list-item [routerLink]="['/']" (click)="onClose()">
+	<a mat-list-item [routerLink]="['/']" [ngClass]="{ 'item-selected': (currentRoute$ | async) === '/' }" (click)="onClose()">
 		<span>Jazzydus Music</span>
 	</a>
-	<a mat-list-item [routerLink]="['/about']" (click)="onClose()">
+	<a mat-list-item [routerLink]="['/about']" [ngClass]="{ 'item-selected': (currentRoute$ | async) === '/about' }" (click)="onClose()">
 		<mat-icon>account_circle</mat-icon>
 		<span>About</span>
 	</a>
-	<a mat-list-item [routerLink]="['/music']" (click)="onClose()">
+	<a mat-list-item [routerLink]="['/music']" [ngClass]="{ 'item-selected': (currentRoute$ | async) === '/music' }" (click)="onClose()">
 		<mat-icon>album</mat-icon>
 		<span>Music</span>
 	</a>
-	<a mat-list-item [routerLink]="['/gallery']" (click)="onClose()">
+	<a mat-list-item [routerLink]="['/gallery']" [ngClass]="{ 'item-selected': (currentRoute$ | async) === '/gallery' }" (click)="onClose()">
 		<mat-icon>collections</mat-icon>
 		<span>Gallery</span>
 	</a>
-	<a mat-list-item [routerLink]="['/video']" (click)="onClose()">
+	<a mat-list-item [routerLink]="['/video']" [ngClass]="{ 'item-selected': (currentRoute$ | async) === '/video' }" (click)="onClose()">
 		<mat-icon>ondemand_video</mat-icon>
 		<span>Video</span>
 	</a>
-	<a mat-list-item [routerLink]="['/contact']" (click)="onClose()">
+	<a mat-list-item [routerLink]="['/contact']" [ngClass]="{ 'item-selected': (currentRoute$ | async) === '/contact' }" (click)="onClose()">
 		<mat-icon>contact_support</mat-icon>
 		<span>Contact</span>
 	</a>
