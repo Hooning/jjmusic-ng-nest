@@ -9,8 +9,8 @@ export const clientShellRoutes: Route[] = [
       {
         path: '',
         loadChildren: async () =>
-          (await import('@jjmusic-ng-nest/client/about/feature/about-list'))
-            .ClientAboutFeatureAboutListModule,
+          (await import('@jjmusic-ng-nest/client/home/feature'))
+            .ClientHomeFeatureModule,
       },
       {
         path: 'about',

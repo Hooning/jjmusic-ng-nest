@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/client/home/feature",
+  "sourceRoot": "libs/client/home/feature/src",
+  "prefix": "client-feature",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/client/home/feature"],
+      "options": {
+        "project": "libs/client/home/feature/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/client/home/feature/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/client/home/feature/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/client/home/feature"],
+      "options": {
+        "jestConfig": "libs/client/home/feature/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/client/home/feature/src/**/*.ts",
+          "libs/client/home/feature/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:client", "type:feature"]
+}
