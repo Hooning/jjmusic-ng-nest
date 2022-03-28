@@ -4,8 +4,7 @@ import { UserMenuComponent } from './user-menu.component';
 
 @NgModule({
   imports: [CommonModule],
-  declarations: [
-    UserMenuComponent
-  ],
+  declarations: [UserMenuComponent],
+  exports: [UserMenuComponent],
 })
 export class SharedUiUserMenuModule {}

@@ -4,15 +4,16 @@
       <mat-icon>menu</mat-icon>
     </button>
   </div>
-  <div><a routerLink="/" class="home-text">Jazzydus Music</a></div>
-  <div class="nav-menu">
+  <mat-nav-list class="nav-menu">
+    <a routerLink="/" class="home-text">Jazzydus Music</a>
     <ul class="navigation-items">
-      <li><a routerLink="/about" class="header-menu-text">About</a></li>
-      <li><a routerLink="/music" class="header-menu-text">Music</a></li>
-      <li><a routerLink="/gallery" class="header-menu-text">Gallery</a></li>
-      <li><a routerLink="/video" class="header-menu-text">Video</a></li>
-      <li><a routerLink="/contact" class="header-menu-text">Contact</a></li>
-    </ul>
-  </div>
-  
+      <li><a mat-list-item routerLink="/about" [ngClass]="{ 'item-selected': (currentRoute$ | async) === '/about' }" class="header-menu-text">About</a></li>
+      <li><a mat-list-item routerLink="/music" [ngClass]="{ 'item-selected': (currentRoute$ | async) === '/music' }" class="header-menu-text">Music</a></li>
+      <li><a mat-list-item routerLink="/gallery" [ngClass]="{ 'item-selected': (currentRoute$ | async) === '/gallery' }" class="header-menu-text">Gallery</a></li>
+      <li><a mat-list-item routerLink="/video" [ngClass]="{ 'item-selected': (currentRoute$ | async) === '/video' }" class="header-menu-text">Video</a></li>
+      <li><a mat-list-item routerLink="/contact" [ngClass]="{ 'item-selected': (currentRoute$ | async) === '/contact' }" class="header-menu-text">Contact</a></li>
+    </ul>    
+  </mat-nav-list>
+  <shared-ui-user-menu></shared-ui-user-menu>
+
 </mat-toolbar>
