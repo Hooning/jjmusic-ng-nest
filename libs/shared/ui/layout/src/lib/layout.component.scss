@@ -1,8 +1,10 @@
 .layout-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
   align-items: stretch;
+  min-height: 65vh;
+  overflow-y: hidden;
   gap: 1rem;
 }
 

@@ -24,7 +24,6 @@ export class ToolbarComponent {
   }
 
   onToggleSidenav(): void {
-    console.log('side nav toggled!');
     this.sidenavToggle.emit();
   }
 }
