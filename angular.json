@@ -2,8 +2,8 @@
   "version": 2,
   "projects": {
     "api": "apps/api",
-    "api-feature-config": "libs/api/feature-config",
-    "api-utils-config": "libs/api/utils-config",
+    "api-feature-config": "libs/api/config/feature-config",
+    "api-utils-config": "libs/api/config/utils-config",
     "client": "apps/client",
     "client-about-feature-about-list": "libs/client/about/feature/about-list",
     "client-e2e": "apps/client-e2e",

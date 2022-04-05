@@ -15,11 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@jjmusic-ng-nest/api/feature-config": [
-        "libs/api/feature-config/src/index.ts"
+      "@jjmusic-ng-nest/api/config/feature-config": [
+        "libs/api/config/feature-config/src/index.ts"
       ],
-      "@jjmusic-ng-nest/api/utils-config": [
-        "libs/api/utils-config/src/index.ts"
+      "@jjmusic-ng-nest/api/config/utils-config": [
+        "libs/api/config/utils-config/src/index.ts"
       ],
       "@jjmusic-ng-nest/client/about/feature/about-list": [
         "libs/client/about/feature/about-list/src/index.ts"
