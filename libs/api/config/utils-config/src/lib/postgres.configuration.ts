@@ -3,8 +3,11 @@ import { ConfigType, registerAs } from '@nestjs/config';
 
 export const postgresConfiguration = registerAs('postgres', () => {
   return {
-    url: process.env.PG_URI || 'postgres://localhost:5432',
-    database: process.env.PG_DATABASE || 'jjmusic-db',
+    host: process.env.PG_HOST || 'localhost',
+    port: process.env.PG_PORT || 5432,
+    database: process.env.PG_DATABASE || 'postgres',
+    username: process.env.PG_USERNAME || 'postgres',
+    password: process.env.PG_PASSWORD || 'postgres',
   };
 });
 

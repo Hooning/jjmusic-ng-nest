@@ -14,10 +14,11 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       useFactory: (config: PostgresConfiguration) => {
         return {
           type: 'postgres',
-          url: config.url,
+          host: config.host,
+          port: +config.port,
           database: config.database,
-          username: 'postgres',
-          password: 'postgres',
+          username: config.username,
+          password: config.password,
           autoLoadEntities: true,
           synchronize: true,
         };

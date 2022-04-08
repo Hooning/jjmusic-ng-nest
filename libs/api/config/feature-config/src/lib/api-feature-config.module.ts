@@ -1,3 +1,7 @@
+import {
+  appConfiguration,
+  postgresConfiguration,
+} from '@jjmusic-ng-nest/api/config/utils-config';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 
@@ -5,7 +9,7 @@ import { ConfigModule } from '@nestjs/config';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-      load: [],
+      load: [appConfiguration, postgresConfiguration],
     }),
   ],
 })
