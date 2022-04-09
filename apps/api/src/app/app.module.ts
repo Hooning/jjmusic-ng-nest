@@ -3,6 +3,7 @@ import {
   PostgresConfiguration,
   postgresConfiguration,
 } from '@jjmusic-ng-nest/api/config/utils-config';
+import { SharedDataAccessModelsModule } from '@jjmusic-ng-nest/shared/data-access/models';
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
@@ -24,6 +25,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         };
       },
     }),
+    SharedDataAccessModelsModule,
   ],
   controllers: [],
 })

@@ -9,6 +9,7 @@
     "client-e2e": "apps/client-e2e",
     "client-home-feature": "libs/client/home/feature",
     "client-shell-feature": "libs/client/shell/feature",
+    "shared-data-access-models": "libs/shared/data-access/models",
     "shared-ui-footer": "libs/shared/ui/footer",
     "shared-ui-layout": "libs/shared/ui/layout",
     "shared-ui-sidenav-list": "libs/shared/ui/sidenav-list",
