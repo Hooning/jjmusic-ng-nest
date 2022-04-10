@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { Instructor } from './instructor.entity';
+import { Instructor } from './entities/instructor.entity';
 
 @Module({
   controllers: [],
