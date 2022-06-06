@@ -5,13 +5,13 @@ services:
     container_name: pg-docker
     restart: always
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=jjmusic
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin!123
     ports:
       - '5432:5432'
     volumes:
       - database-data:/var/lib/postgresql/data
-
+      - ./apps/api/src/db/init.sql:/docker-entrypoint-initdb.d/./apps/api/src/db/init.sql
 volumes:
   database-data:

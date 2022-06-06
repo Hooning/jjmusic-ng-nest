@@ -8,6 +8,10 @@
 # dependencies
 /node_modules
 
+# environments
+apps/api/src/environments/development.env
+apps/api/src/environments/production.env
+
 # IDEs and editors
 /.idea
 .project

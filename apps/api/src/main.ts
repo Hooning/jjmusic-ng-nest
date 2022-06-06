@@ -4,9 +4,9 @@
  */
 
 import {
-  AppConfiguration,
   appConfiguration,
-} from '@jjmusic-ng-nest/api/config/utils-config';
+  AppConfiguration,
+} from '@jjmusic-ng-nest/api/shared/util';
 import { Logger } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app/app.module';
@@ -16,6 +16,7 @@ async function bootstrap() {
   const appConfig = app.get<AppConfiguration>(appConfiguration.KEY);
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);
+  console.log('## appConfig.port: ', appConfig.port);
   await app.listen(appConfig.port);
   Logger.log(
     `🚀 Application is running on: ${appConfig.domain}/${globalPrefix}`

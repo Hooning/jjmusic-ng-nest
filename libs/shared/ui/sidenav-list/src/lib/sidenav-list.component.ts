@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { BehaviorSubject, filter, map, tap } from 'rxjs';
+import { BehaviorSubject, filter, map } from 'rxjs';
 
 @Component({
   selector: 'shared-ui-sidenav-list',
