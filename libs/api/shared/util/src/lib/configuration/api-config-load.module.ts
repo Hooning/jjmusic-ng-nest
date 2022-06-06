@@ -1,11 +1,13 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
+import { join } from 'path';
 import { getEnvPath } from '../helper/env.helper';
 import { appConfiguration } from './app.configuration';
 import { databaseConfiguration } from './database.configuration';
 
-const envFilePath: string = getEnvPath(`${__dirname}/environments`);
-console.log('# envFilePath: ', envFilePath);
+const envFilePath: string = getEnvPath(
+  join(__dirname, '/../../..', 'apps/api/src/environments')
+);
 
 @Module({
   imports: [

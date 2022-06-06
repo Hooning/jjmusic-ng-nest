@@ -16,7 +16,6 @@ async function bootstrap() {
   const appConfig = app.get<AppConfiguration>(appConfiguration.KEY);
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);
-  console.log('## appConfig.port: ', appConfig.port);
   await app.listen(appConfig.port);
   Logger.log(
     `🚀 Application is running on: ${appConfig.domain}/${globalPrefix}`
