@@ -6,9 +6,11 @@ dotenv.config({
   path: join(
     __dirname,
     '..',
-    `/environments/${process.env.NODE_ENV || 'development'}.env`
+    `/environments/${process.env.NODE_ENV || '.env'}`
   ),
 });
+
+console.log(process.env.NODE_ENV, process.env.DB_HOST, process.env.DB_NAME);
 
 const config: PostgresConnectionOptions = {
   type: 'postgres',
@@ -23,7 +25,7 @@ const config: PostgresConnectionOptions = {
   cli: {
     migrationsDir: 'apps/api/src/db/migrations',
   },
-  ssl: process.env.NODE_ENV !== 'development',
+  ssl: false,
 };
 
 export = config;
