@@ -17,9 +17,7 @@ async function bootstrap() {
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);
   await app.listen(appConfig.port);
-  Logger.log(
-    `🚀 Application is running on: ${appConfig.domain}/${globalPrefix}`
-  );
+  Logger.log(`🚀 Application is running on: ${appConfig.domain}`);
 }
 
 bootstrap();
