@@ -1,5 +1,5 @@
 import { Route } from '@angular/router';
-import { LayoutComponent } from '@jjmusic-ng-nest/shared/ui/layout';
+import { LayoutComponent } from '@jjmusic-ng-nest/client/shared/ui/layout';
 
 export const clientShellRoutes: Route[] = [
   {

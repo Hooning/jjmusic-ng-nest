@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { LayoutModule } from '@jjmusic-ng-nest/shared/ui/layout';
+
 import { clientShellRoutes } from './client-shell.routes';
+import { LayoutModule } from '@jjmusic-ng-nest/client/shared/ui/layout';
 
 @NgModule({
   imports: [

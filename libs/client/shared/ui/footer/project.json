@@ -1,30 +1,30 @@
 {
   "projectType": "library",
-  "root": "libs/shared/ui/layout",
-  "sourceRoot": "libs/shared/ui/layout/src",
+  "root": "libs/client/shared/ui/footer",
+  "sourceRoot": "libs/client/shared/ui/footer/src",
   "prefix": "shared-ui",
   "targets": {
     "build": {
       "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": ["dist/libs/shared/ui/layout"],
+      "outputs": ["dist/libs/client/shared/ui/footer"],
       "options": {
-        "project": "libs/shared/ui/layout/ng-package.json"
+        "project": "libs/client/shared/ui/footer/ng-package.json"
       },
       "configurations": {
         "production": {
-          "tsConfig": "libs/shared/ui/layout/tsconfig.lib.prod.json"
+          "tsConfig": "libs/client/shared/ui/footer/tsconfig.lib.prod.json"
         },
         "development": {
-          "tsConfig": "libs/shared/ui/layout/tsconfig.lib.json"
+          "tsConfig": "libs/client/shared/ui/footer/tsconfig.lib.json"
         }
       },
       "defaultConfiguration": "production"
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/shared/ui/layout"],
+      "outputs": ["coverage/libs/client/shared/ui/footer"],
       "options": {
-        "jestConfig": "libs/shared/ui/layout/jest.config.js",
+        "jestConfig": "libs/client/shared/ui/footer/jest.config.js",
         "passWithNoTests": true
       }
     },
@@ -32,8 +32,8 @@
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "libs/shared/ui/layout/src/**/*.ts",
-          "libs/shared/ui/layout/src/**/*.html"
+          "libs/client/shared/ui/footer/src/**/*.ts",
+          "libs/client/shared/ui/footer/src/**/*.html"
         ]
       }
     }

@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout.component';
 import { MaterialModule } from '@jjmusic-ng-nest/shared/utils/material';
-import { SharedUiFooterModule } from '@jjmusic-ng-nest/shared/ui/footer';
+import { SharedUiFooterModule } from '@jjmusic-ng-nest/client/shared/ui/footer';
 import { SharedUiToolbarModule } from '@jjmusic-ng-nest/shared/ui/toolbar';
 import { SharedUiSidenavListModule } from '@jjmusic-ng-nest/shared/ui/sidenav-list';
 
