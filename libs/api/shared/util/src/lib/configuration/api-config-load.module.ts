@@ -3,7 +3,6 @@ import { ConfigModule } from '@nestjs/config';
 import { join } from 'path';
 import { getEnvPath } from '../helper/env.helper';
 import { appConfiguration } from './app.configuration';
-import { databaseConfiguration } from './database.configuration';
 
 const envFilePath: string = getEnvPath(
   join(__dirname, '/../../..', 'apps/api/src/environments')
@@ -14,7 +13,7 @@ const envFilePath: string = getEnvPath(
     ConfigModule.forRoot({
       envFilePath,
       isGlobal: true,
-      load: [appConfiguration, databaseConfiguration],
+      load: [appConfiguration],
     }),
   ],
 })
